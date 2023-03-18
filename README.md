@@ -1,4 +1,4 @@
-# Haplotypes
+# Haplotypes phasing
 Haplotypes phasing from SNP beadchip
 you can run the bash script Filtering-phasing-dataset.sh
 
@@ -19,7 +19,7 @@ Note that the recombination rates used in SHAPEIT.py are for the sus-scrofa geno
 
 
 
-Dependencies:
+# Dependencies:
 
 This project requires the following dependencies:
 
