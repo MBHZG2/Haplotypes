@@ -19,9 +19,12 @@ Note that the recombination rates used in SHAPEIT.py are for the sus-scrofa geno
 
 
 
-Dependencies
+Dependencies:
+
 This project requires the following dependencies:
 
 Python 2.7 or later
+
 SHAPEIT2 (available from https://mathgen.stats.ox.ac.uk/genetics_software/shapeit/shapeit.html)
+
 PLINK (available from https://www.cog-genomics.org/plink/)
