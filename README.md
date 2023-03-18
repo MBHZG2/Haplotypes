@@ -1,5 +1,5 @@
 # Haplotypes
-Haplotypes from SNP beadchip
+Haplotypes phasing from SNP beadchip
 you can run the bash script Filtering-phasing-dataset.sh
 
 
