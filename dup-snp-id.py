@@ -2,13 +2,19 @@ import sys
 
 with open(sys.argv[1]) as plink_map_file:
     chromosome_positions = {}
+    SNP_positions = {}
     for line in plink_map_file:
         parts = line.split()
-        chromosome = parts[0]
+        SNP = parts[1]
         position = parts[-1]
-        key = "{chromosome}#{position}"
-        chromosome_positions[key] = parts
+        chromosome=parts[0]
+        tag = chromosome+"#"+position
+        chromosome_positions[SNP]=tag
+        SNP_positions[tag]=SNP
+    rev_dict = {}
+    for key, value in chromosome_positions.items():
+        rev_dict.setdefault(value, set()).add(key)
 
-    positions_to_check = set(key for key in chromosome_positions if list(chromosome_positions).count(key) > 1)
-    for position in sorted(positions_to_check):
-        print(chromosome_positions[position][1])
+    result = [key for key, values in rev_dict.items() if len(values) > 1]
+    for marker in result:
+                print SNP_positions[marker]
